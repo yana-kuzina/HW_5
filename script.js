@@ -10,7 +10,7 @@ console.log(searchString("Hello", "www")); // false
 
 // 2
 function capitalizeFirstLetter(str) {
-  return str[0].toUpperCase() + str.substring(1);
+  return `${str[0].toUpperCase()}${str.substring(1)}`;
 }
 
 console.log(capitalizeFirstLetter("hello")); // Hello
@@ -20,7 +20,7 @@ console.log(capitalizeFirstLetter("hElLo")); // HElLo
 // 3
 function truncate(str, num) {
   if (str.length > num) {
-    return str.slice(0, num) + "...";
+    return `${str.slice(0, num)}...`;
   } else {
     return str;
   }
@@ -95,9 +95,7 @@ console.log(`Средняя стоимость автомомилей type 'suv'
 
 // 6
 function copySorted(array) {
-  let newArray = array.slice();
-  newArray.sort((a, b) => a - b);
-  return newArray;
+  return array.slice().sort((a, b) => a - b);
 }
 let arr = [10, 20, 3, 4, 0, 99, 97];
 let sorted = copySorted(arr);
